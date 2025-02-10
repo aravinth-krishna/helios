@@ -62,6 +62,11 @@ export default function Chat() {
     return groq.chat.completions.create({
       messages: [
         {
+          role: "system",
+          content:
+            "You are a helpful bot that can answer questions about Solar Energy, solar panels, ROI, panels efficiency, etc...",
+        },
+        {
           role: "user",
           content: userMessage,
         },

@@ -15,20 +15,18 @@
 .chatContainer {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 700px; /* Adjust max width as needed */
+  width: 80%;
   margin: 0 auto; /* Center the chat container */
-  padding: 20px;
   background-color: #f8f8f8; /* Light gray background */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   margin-top: auto; /* Push chat container to the bottom */
-  margin-bottom: 20px; /* Add some margin at the bottom */
 }
 
 .history {
   flex-grow: 1; /* Let history take up available space */
-  max-height: 400px; /* Increased max height for more messages */
+  height: 100%; /* Full height for history area */
+  min-height: 65vh; /* Increased max height for more messages */
   overflow-y: auto;
   padding: 15px;
   margin-bottom: 20px;
