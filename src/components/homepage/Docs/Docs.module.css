@@ -1,0 +1,143 @@
+/* Docs.module.css - COLORFUL THEME */
+.docsSection {
+  background-color: #e8f4fd; /* Very light blue background - airy and bright */
+  color: #333; /* Darker text for readability on light background */
+  padding: 2rem 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  width: 94%; /* Slightly wider container */
+  max-width: 1300px; /* Wider max-width */
+  margin: 0 auto;
+  padding: 2rem 1rem; /* Increased padding */
+  margin-bottom: 2rem; /* Increased bottom margin */
+}
+
+.header {
+  margin-bottom: 5rem; /* Increased header margin */
+}
+
+.sectionTitle {
+  font-size: 2.8rem; /* Increased title font size */
+  font-weight: 700; /* Bolder font weight for title */
+  color: #007bff; /* Bright blue title - energetic and colorful */
+  text-align: center;
+  margin-bottom: 2rem; /* Increased margin */
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.05rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Soft text shadow for light theme */
+  text-transform: uppercase;
+}
+
+.introText {
+  font-size: 1.35rem; /* Slightly larger intro text size */
+  line-height: 2.1;
+  color: #555; /* Medium dark gray intro text */
+  text-align: center;
+  margin: 0 auto 5rem; /* Increased bottom margin for intro text */
+  max-width: 800px;
+  font-weight: 400;
+}
+
+.docsContent {
+  padding: 3rem 0; /* Increased padding for the main content area */
+}
+
+.contentText {
+  font-size: 1.15rem; /* Slightly larger text for content paragraph */
+  line-height: 1.8;
+  color: #666; /* Medium gray text color for content */
+  margin-bottom: 3rem; /* Increased margin below content text */
+  max-width: 850px; /* Slightly wider max width for content text */
+  margin-left: auto;
+  margin-right: auto; /* Center the content text */
+  font-weight: 400;
+}
+
+.docsButton {
+  /* Container for button to center it if needed */
+  display: flex;
+  justify-content: center;
+}
+
+.githubButton {
+  padding: 1rem 2.5rem; /* Increased button padding */
+  font-size: 1.2rem; /* Increased button font size */
+  font-weight: 600; /* Bolder font weight for button text */
+  color: #fff; /* White text color for button - contrast on blue/green */
+  background-color: #28a745; /* Green button background - colorful accent */
+  border: none; /* Remove default border */
+  border-radius: 0.75rem; /* Adjusted button border radius */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+    background-color 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Light button shadow for light theme */
+}
+
+.githubButton:hover {
+  background-color: #218838; /* Slightly darker green on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Slightly enhanced shadow on hover */
+}
+
+.githubButton:active {
+  transform: translateY(0); /* No lift when active/clicked */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Reduced shadow when active/clicked */
+}
+
+/* Responsive adjustments - minor tweaks for light theme */
+@media (max-width: 768px) {
+  .docsSection {
+    padding: 4rem 0; /* Adjusted section padding for mobile */
+  }
+  .container {
+    width: 96%; /* Wider container on mobile */
+    padding: 2.5rem;
+    margin-bottom: 4rem;
+  }
+  .header {
+    margin-bottom: 3.5rem;
+  }
+  .sectionTitle {
+    font-size: 2.5rem; /* Adjusted title size on mobile */
+    margin-bottom: 1.2rem;
+  }
+  .introText {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    margin-bottom: 3.5rem;
+  }
+  .docsContent {
+    padding: 2rem 0; /* Adjusted content padding for mobile */
+  }
+  .contentText {
+    font-size: 1.05rem; /* Adjusted content text size for mobile */
+    margin-bottom: 2.5rem;
+  }
+  .githubButton {
+    font-size: 1.1rem; /* Adjusted button font size for mobile */
+    padding: 0.8rem 2rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Adjusted button shadow for mobile light theme */
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 2.2rem; /* Further reduced section title size for very small screens */
+  }
+  .introText {
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+  .contentText {
+    font-size: 1rem;
+  }
+  .githubButton {
+    font-size: 1rem; /* Further reduced button font size for very small screens */
+    padding: 0.7rem 1.8rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); /* Further adjusted button shadow for very small screens */
+  }
+}

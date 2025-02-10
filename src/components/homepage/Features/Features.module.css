@@ -1,0 +1,235 @@
+/* Features.module.css - COLORFUL THEME */
+.featuresSection {
+  background-color: #f0f8ff; /* Very light blue background - airy and bright */
+  color: #333; /* Darker text for readability on light background */
+  text-align: center;
+  overflow: hidden;
+  padding: 1rem 0; /* Increased vertical padding */
+  position: relative;
+}
+
+.container {
+  width: 94%; /* Slightly wider container */
+  max-width: 1300px; /* Wider max-width */
+  margin: 0 auto;
+  padding: 2rem 1rem; /* Increased padding */
+  margin-bottom: 2rem; /* Increased bottom margin */
+}
+
+.header {
+  margin-bottom: 2rem; /* Increased header margin */
+}
+
+.sectionTitle {
+  font-size: 2.8rem; /* Increased title font size */
+  font-weight: 700; /* Bolder title font weight */
+  color: #007bff; /* Bright blue title - energetic and colorful */
+  text-align: center;
+  margin-bottom: 2rem; /* Increased margin */
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.05rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Soft text shadow for light theme */
+  text-transform: uppercase;
+}
+
+.introText {
+  font-size: 1.35rem; /* Slightly larger intro text */
+  line-height: 2.1;
+  color: #555; /* Medium dark gray intro text */
+  text-align: center;
+  margin: 0 auto 5rem; /* Increased bottom margin */
+  max-width: 800px;
+  font-weight: 400;
+  opacity: 1; /* Reset opacity to 1 for light theme */
+}
+
+/* Wrapper for both carousels */
+.carouselWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Common carousel container styling - Removed borders for light theme */
+.topCarousel,
+.bottomCarousel {
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem 0;
+}
+
+/* Carousel inner containers – animations remain same */
+.carouselInnerLeftToRight,
+.carouselInnerRightToLeft {
+  display: flex;
+  gap: 2rem;
+  width: fit-content;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.carouselInnerLeftToRight {
+  animation-name: slideLtoR;
+}
+
+.carouselInnerRightToLeft {
+  animation-name: slideRtoL;
+  flex-direction: row-reverse;
+}
+
+/* Animation keyframes - remain same */
+@keyframes slideLtoR {
+  0% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRtoL {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20%);
+  }
+}
+
+/* Feature card styling - Colorful and Bright */
+.featureCard {
+  background-color: #fff; /* White card background for bright theme */
+  flex: 0 0 auto;
+  width: 360px; /* Wider cards */
+  border-radius: 0.8rem;
+  padding: 2rem 1rem; /* Increased padding */
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08); /* Very light card shadow for light theme */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Very subtle border for light theme */
+  backdrop-filter: blur(3px); /* Reduced blur for light theme */
+}
+
+.featureCard:hover {
+  transform: translateY(-8px); /* Reduced hover lift for light theme */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12); /* Slightly enhanced hover shadow for light theme */
+  background-color: #f9f9f9; /* Slightly off-white hover background */
+  border-color: rgba(
+    0,
+    0,
+    0,
+    0.08
+  ); /* Slightly more visible border on hover for light theme */
+}
+
+.featureIcon {
+  font-size: 2.5rem; /* Increased icon size */
+  color: #0ece00; /* Yellow-amber icon color - warm and bright */
+  margin-bottom: 2.5rem; /* Increased icon margin */
+  opacity: 0.9; /* Slightly reduced opacity for icon color in light theme */
+}
+
+.featureCardTitle {
+  font-size: 1.4rem; /* Slightly increased card title size */
+  font-weight: 700; /* Bolder card title */
+  letter-spacing: 0.03rem;
+  line-height: 1.5;
+  color: #0056b3; /* Blue card title - contrasting and colorful */
+  margin-bottom: 1.2rem; /* Increased title margin */
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+}
+
+.featureCardDescription {
+  font-size: 1.1rem; /* Slightly increased card description size */
+  line-height: 1.8;
+  color: #666; /* Medium gray card description text */
+  font-weight: 400;
+  opacity: 1; /* Reset opacity for description text in light theme */
+}
+
+/* Responsive adjustments - minor tweaks for light theme */
+@media (max-width: 768px) {
+  .featuresSection {
+    padding: 5rem 0; /* Adjusted section padding for mobile */
+  }
+  .container {
+    width: 98%; /* Even wider container on mobile */
+    padding: 2.5rem;
+    margin-bottom: 4rem;
+  }
+  .header {
+    margin-bottom: 3.5rem;
+  }
+  .sectionTitle {
+    font-size: 2.5rem; /* Adjusted title size on mobile */
+    margin-bottom: 1.2rem;
+  }
+  .introText {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    margin-bottom: 3.5rem;
+  }
+  .carouselWrapper {
+    gap: 3rem;
+  }
+  .topCarousel,
+  .bottomCarousel {
+    padding: 1rem 0;
+    border-top: none; /* Removed borders for cleaner look on mobile - light theme */
+    border-bottom: none; /* Removed borders for cleaner look on mobile - light theme */
+  }
+  .carouselInnerLeftToRight,
+  .carouselInnerRightToLeft {
+    gap: 2.5rem;
+    animation-duration: 22s;
+  }
+  .featureCard {
+    width: 320px; /* Adjusted card width on mobile */
+    padding: 2.2rem;
+    border-radius: 0.65rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adjusted card shadow for mobile light theme */
+  }
+  .featureCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Adjusted hover shadow for mobile light theme */
+  }
+  .featureIcon {
+    font-size: 2rem;
+    margin-bottom: 1.8rem;
+  }
+  .featureCardTitle {
+    font-size: 1.3rem;
+  }
+  .featureCardDescription {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 2.2rem; /* Further reduced section title size for very small screens */
+  }
+  .introText {
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+  .featureCard {
+    width: 95%;
+    padding: 2rem 1.5rem;
+  }
+  .carouselInnerLeftToRight,
+  .carouselInnerRightToLeft {
+    gap: 2rem;
+  }
+  .featureCardTitle {
+    font-size: 1.25rem;
+  }
+  .featureCardDescription {
+    font-size: 0.9rem;
+  }
+}
