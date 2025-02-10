@@ -1,0 +1,58 @@
+/* MapLocationPicker.module.css */
+
+.mapPickerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mapContainer {
+  height: 400px; /* Ensure height is set */
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden; /* Clip popup within map bounds */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.popup {
+  composes: leaflet-popup from "leaflet/dist/leaflet.css"; /* Compose Leaflet's default popup styles */
+  /* Add or override popup styles here if needed */
+  .leaflet-popup-content-wrapper {
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  .leaflet-popup-content {
+    margin: 0;
+    line-height: 1.4;
+  }
+  .leaflet-popup-tip-container {
+    width: 16px;
+    height: 8px;
+  }
+  .leaflet-popup-tip {
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.locationDisplay {
+  margin-top: 15px;
+  text-align: center;
+  padding: 15px;
+  background-color: #f0f2f5;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.locationTitle {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.locationCoords {
+  font-size: 0.95em;
+  color: #555;
+}

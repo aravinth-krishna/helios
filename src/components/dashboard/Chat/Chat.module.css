@@ -1,0 +1,133 @@
+/* Chat.module.css (No changes needed to CSS, but included for completeness) */
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh; /* Ensure container takes up at least full viewport height */
+}
+
+.title {
+  text-align: center;
+  color: #333; /* Dark gray text color */
+  font-size: 1.25rem; /* Larger title font size */
+}
+
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px; /* Adjust max width as needed */
+  margin: 0 auto; /* Center the chat container */
+  padding: 20px;
+  background-color: #f8f8f8; /* Light gray background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-top: auto; /* Push chat container to the bottom */
+  margin-bottom: 20px; /* Add some margin at the bottom */
+}
+
+.history {
+  flex-grow: 1; /* Let history take up available space */
+  max-height: 400px; /* Increased max height for more messages */
+  overflow-y: auto;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #fff; /* White background for history area */
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06); /* Subtle inset shadow */
+  display: flex; /* Enable flexbox for message alignment */
+  flex-direction: column; /* Stack messages vertically */
+}
+
+.message {
+  padding: 12px 15px;
+  border-radius: 18px; /* More rounded message bubbles */
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Softer shadow for messages */
+  width: fit-content; /* Adjust width to content */
+  max-width: 80%; /* Max width to prevent overflowing container */
+}
+
+.userMessage {
+  background-color: #e0f7fa; /* Light cyan for user messages */
+  align-self: flex-end; /* Align user messages to the right */
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 18px;
+}
+
+.botMessage {
+  background-color: #f0f0f0; /* Light gray for bot messages */
+  align-self: flex-start; /* Align bot messages to the left */
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+.messageHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.9em;
+  color: #777; /* Muted color for header */
+}
+
+.userIcon,
+.botIcon {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.icon {
+  width: 18px; /* Adjust icon size */
+  height: 18px;
+  margin-right: 4px;
+  color: #aaa; /* Muted icon color */
+}
+
+.form {
+  display: flex;
+  gap: 10px; /* Spacing between input and button */
+  width: 100%;
+}
+
+.input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd; /* Lighter border for input */
+  border-radius: 25px; /* Rounded input */
+  font-size: 1em;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06); /* Subtle inset shadow */
+  transition: border-color 0.2s ease-in-out; /* Smooth border transition */
+}
+
+.input:focus {
+  outline: none;
+  border-color: #aaa; /* Slightly darker border on focus */
+  box-shadow: 0 0 0 2px rgba(170, 170, 170, 0.2); /* Focus ring */
+}
+
+.button {
+  padding: 12px 20px;
+  background-color: #007bff; /* Vibrant button color */
+  color: #fff;
+  border: none;
+  border-radius: 25px; /* Rounded button */
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Button shadow */
+  transition: background-color 0.2s ease-in-out; /* Button hover transition */
+  display: flex; /* Enable flexbox for icon and text alignment */
+  align-items: center;
+  gap: 8px; /* Spacing between icon and text */
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.sendIcon {
+  width: 18px; /* Adjust send icon size */
+  height: 18px;
+}

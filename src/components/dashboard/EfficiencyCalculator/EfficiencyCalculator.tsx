@@ -161,8 +161,7 @@ const SolarPerformanceCalculator: React.FC<SolarPerformanceCalculatorProps> = ({
         {" "}
         {/* Input group style */}
         <p className={styles.locationInfo}>
-          Location: Latitude: {latitude}, Longitude: {longitude} (Fixed by
-          props)
+          Latitude: {latitude}, Longitude: {longitude}
         </p>
       </div>
       <div className={styles.inputGroup}>
@@ -289,7 +288,7 @@ const SolarPerformanceCalculator: React.FC<SolarPerformanceCalculatorProps> = ({
           <p className={styles.resultsText}>
             {" "}
             {/* Apply results text style */}
-            Solar Irradiance on 2025-02-02:{" "}
+            Solar Irradiance:{" "}
             <strong className={styles.resultsValue}>
               {irradiance} kW-hr/m²/day
             </strong>{" "}

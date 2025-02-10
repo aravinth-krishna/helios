@@ -8,7 +8,7 @@ const SignOutButton = () => {
 
   const handleSignOut = () => {
     localStorage.removeItem("token");
-    router.push("/auth/signin");
+    router.push("/");
   };
 
   return (

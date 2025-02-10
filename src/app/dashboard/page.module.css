@@ -1,11 +1,28 @@
 /* DashboardPage.module.css */
 
+.dashboardContainer {
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  display: flex;
+  flex: 1;
+}
+
+.contentArea {
+  flex: 1;
+  padding: 1rem;
+}
+
 .componentWrapper {
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 20px; /* Space between components in column layout */
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 .sideBySideContainer {
@@ -34,6 +51,12 @@
 @media (max-width: 768px) {
   .dashboardContainer {
     flex-direction: column; /* Stack components vertically on smaller screens */
+  }
+  .mainContent {
+    flex-direction: column;
+  }
+  .contentArea {
+    padding: 0;
   }
   .sideBySideContainer {
     flex-direction: column; /* Stack side-by-side components vertically on smaller screens */
