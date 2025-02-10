@@ -23,3 +23,21 @@ enum Role {
   USER
   ADMIN
 }
+
+model SolarData {
+  id                  String   @id @default(uuid())
+  latitude            Float
+  longitude           Float
+  roofArea            Float
+  slope               Float
+  panelEfficiency     Float
+  systemLosses        Float
+  estimatedSystemCost Float
+  electricityCost     Float
+  irradiance          Float?
+  estimatedACEnergy   Float?
+  systemEfficiency    Float?
+  roi                 Float?
+  paybackPeriod       Float?
+  savedAt             DateTime @default(now())
+}
