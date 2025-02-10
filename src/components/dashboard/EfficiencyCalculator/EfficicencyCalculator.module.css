@@ -1,0 +1,87 @@
+.calculatorContainer {
+  font-family: sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.calculatorTitle {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.inputGroup {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.locationInfo {
+  margin-bottom: 15px;
+  font-size: 0.9em;
+  color: #777;
+  text-align: center;
+}
+
+.inputLabel {
+  margin-right: 15px;
+  width: 180px; /* Adjust label width as needed */
+  text-align: right;
+  font-weight: bold;
+  color: #555;
+}
+
+.inputField {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(
+    100% - 200px
+  ); /* Adjust input width based on label width and padding */
+  box-sizing: border-box;
+}
+
+.loading,
+.error,
+.noData {
+  text-align: center;
+  margin-top: 15px;
+  font-style: italic;
+  color: #888;
+}
+
+.error {
+  color: #d32f2f; /* Red color for error */
+  font-weight: bold;
+}
+
+.resultsContainer {
+  margin-top: 25px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.resultsTitle {
+  color: #007bff; /* Blue color for result titles */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.resultsText {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.resultsValue {
+  font-weight: bold;
+  color: #2e7d32; /* Green color for important result values */
+}

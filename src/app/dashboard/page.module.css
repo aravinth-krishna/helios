@@ -1,0 +1,52 @@
+/* DashboardPage.module.css */
+
+.componentWrapper {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px; /* Space between components in column layout */
+}
+
+.sideBySideContainer {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sideBySideContainer > div {
+  flex: 1; /* Equal width distribution */
+  min-width: 300px; /* Minimum width for each side-by-side component */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.dashboardTitle {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+/* Responsive adjustments for smaller screens - switch to column layout */
+@media (max-width: 768px) {
+  .dashboardContainer {
+    flex-direction: column; /* Stack components vertically on smaller screens */
+  }
+  .sideBySideContainer {
+    flex-direction: column; /* Stack side-by-side components vertically on smaller screens */
+    gap: 20px; /* Maintain spacing between stacked components */
+  }
+  .sideBySideContainer > div {
+    width: 100%; /* Full width for stacked components */
+    min-width: auto; /* Reset min-width for full width */
+    margin-bottom: 20px; /* Add margin between stacked components */
+  }
+  .componentWrapper,
+  .sideBySideContainer > div {
+    /* Consistent styling for stacked items */
+    margin-bottom: 20px; /* Ensure margin between stacked components */
+  }
+}
