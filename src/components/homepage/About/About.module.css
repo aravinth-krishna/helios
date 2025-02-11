@@ -1,12 +1,10 @@
 .about {
-  background-color: #e8f4fd; 
+  background-color: #e8f4fd;
   padding: 5rem 2rem;
-  color: #333; 
+  color: #333;
   overflow: hidden;
   position: relative;
 }
-
-/* About Hero Section */
 .aboutHero {
   display: flex;
   flex-wrap: wrap;
@@ -27,8 +25,8 @@
   margin-bottom: 1.7rem;
   text-transform: uppercase;
   letter-spacing: -0.05rem;
-  color: #007bff; 
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /
+  color: #007bff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   font-weight: 700;
   font-family: "Inter", sans-serif;
 }
@@ -36,7 +34,7 @@
 .aboutHeroText p {
   font-size: 1.3rem;
   line-height: 1.9;
-  color: #555; 
+  color: #555;
   font-family: "Inter", sans-serif;
   font-weight: 400;
 }
@@ -50,12 +48,12 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border: 1px solid rgba(0, 0, 0, 0.05); 
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .aboutHeroImage:hover {
-  transform: scale(1.04); 
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.04);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .heroImg {
@@ -64,7 +62,6 @@
   object-fit: cover;
   display: block;
 }
-
 
 .featuresSection {
   text-align: center;
@@ -76,13 +73,12 @@
   margin-bottom: 3.5rem;
   text-transform: uppercase;
   letter-spacing: -0.03rem;
-  color: #007bff; 
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  color: #007bff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   font-weight: 700;
   font-family: "Inter", sans-serif;
 }
 
-/* Responsive grid for feature cards */
 .featuresGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -93,12 +89,12 @@
 }
 
 .featureCard {
-  background-color: #fff; 
-  border: 1px solid rgba(0, 0, 0, 0.08); 
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 0.75rem;
   padding: 2rem;
-  backdrop-filter: blur(5px); 
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08); 
+  backdrop-filter: blur(5px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,16 +103,16 @@
 }
 
 .featureCard:hover {
-  transform: translateY(-8px); 
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12); 
-  background-color: #f9f9f9; 
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  background-color: #f9f9f9;
 }
 
 .featureCard h3 {
   margin: 1.3rem 0 1rem;
   font-size: 1.5rem;
   text-transform: uppercase;
-  color: #0056b3; 
+  color: #0056b3;
   letter-spacing: 0.04rem;
   font-weight: 600;
   font-family: "Inter", sans-serif;
@@ -125,15 +121,15 @@
 .featureCard p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #666; 
+  color: #666;
   font-family: "Inter", sans-serif;
   font-weight: 400;
 }
 
 .iconWrapper {
   font-size: 2.7rem;
-  color: #ffc107; /
-  opacity: 0.9; 
+  color: #ffc107;
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
@@ -162,11 +158,11 @@
     height: 300px;
     border-radius: 0.6rem;
     max-width: 95%;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   }
   .aboutHeroImage:hover {
     transform: scale(1.02);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2); /
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
   }
   .featuresSection {
     padding: 3rem 1rem;
@@ -182,13 +178,11 @@
   .featureCard {
     padding: 2rem;
     border-radius: 0.6rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   .featureCard:hover {
-    transform: translateY(
-      -6px
-    ); 
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+    transform: translateY(-6px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   }
   .iconWrapper {
     font-size: 2.4rem;

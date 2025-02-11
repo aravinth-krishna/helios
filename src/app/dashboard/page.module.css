@@ -30,8 +30,8 @@
 }
 
 .sideBySideContainer > div {
-  flex: 1; 
-  min-width: 300px; 
+  flex: 1;
+  min-width: 300px;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -47,7 +47,7 @@
 
 @media (max-width: 768px) {
   .dashboardContainer {
-    flex-direction: column; 
+    flex-direction: column;
   }
   .mainContent {
     flex-direction: column;
@@ -56,16 +56,16 @@
     padding: 0;
   }
   .sideBySideContainer {
-    flex-direction: column; /
-    gap: 20px; 
+    flex-direction: column;
+    gap: 20px;
   }
   .sideBySideContainer > div {
-    width: 100%; 
+    width: 100%;
     min-width: auto;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
   }
   .componentWrapper,
   .sideBySideContainer > div {
-   
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+  }
 }
