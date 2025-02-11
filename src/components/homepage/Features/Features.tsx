@@ -87,7 +87,6 @@ const Features = () => {
         </div>
 
         <div className={styles.carouselWrapper}>
-          {/* Top carousel – slides from left to right */}
           <div className={styles.topCarousel}>
             <div className={styles.carouselInnerLeftToRight}>
               {topFeatures.map((feature, index) => (
@@ -102,7 +101,6 @@ const Features = () => {
                   </p>
                 </div>
               ))}
-              {/* Duplicate the cards for seamless looping */}
               {topFeatures.map((feature, index) => (
                 <div
                   className={styles.featureCard}
@@ -118,7 +116,6 @@ const Features = () => {
             </div>
           </div>
 
-          {/* Bottom carousel – slides from right to left */}
           <div className={styles.bottomCarousel}>
             <div className={styles.carouselInnerRightToLeft}>
               {bottomFeatures.map((feature, index) => (

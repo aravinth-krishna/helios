@@ -14,11 +14,9 @@ interface Article {
   urlToImage: string;
 }
 
-// Helper to truncate text
 const truncate = (text: string, maxLength: number): string =>
   text.length <= maxLength ? text : text.slice(0, maxLength) + "...";
 
-// Helper to compute date range based on a time period
 const getDateRange = (timePeriod: string): { from?: string; to?: string } => {
   const today = new Date();
   switch (timePeriod) {
@@ -27,8 +25,7 @@ const getDateRange = (timePeriod: string): { from?: string; to?: string } => {
       return { from: dateStr, to: dateStr };
     }
     case "week": {
-      // Assume week starts on Monday
-      const day = today.getDay(); // Sunday is 0, Monday is 1
+      const day = today.getDay();
       const diffToMonday = day === 0 ? 6 : day - 1;
       const monday = new Date(today);
       monday.setDate(today.getDate() - diffToMonday);
@@ -58,7 +55,6 @@ const getDateRange = (timePeriod: string): { from?: string; to?: string } => {
 };
 
 const NewsFetcher: React.FC = () => {
-  // Set initial query to include multiple keywords using the OR operator.
   const [query, setQuery] = useState<string>(
     "solar panel OR solar energy OR photovoltaic"
   );
@@ -71,12 +67,11 @@ const NewsFetcher: React.FC = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const apiKey = "fcdefc09d30b45dcb7ac3940e8da126d"; // Replace with your actual API key
+        const apiKey = "fcdefc09d30b45dcb7ac3940e8da126d";
         let url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(
           query
         )}&apiKey=${apiKey}`;
 
-        // Append date filtering if a specific time period is selected
         if (timePeriod !== "all") {
           const { from, to } = getDateRange(timePeriod);
           if (from && to) {
@@ -84,7 +79,6 @@ const NewsFetcher: React.FC = () => {
           }
         }
 
-        // Append sorting and sources filters if provided
         if (sortBy) url += `&sortBy=${sortBy}`;
         if (sources) url += `&sources=${sources}`;
 
@@ -118,7 +112,6 @@ const NewsFetcher: React.FC = () => {
     fetchNews();
   }, [query, timePeriod, sortBy, sources]);
 
-  // Handle search form submission
   const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;

@@ -110,55 +110,54 @@
   align-items: center;
   text-align: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border: 1px solid rgba(0, 0, 0, 0.05); /* Very subtle border for light theme */
-  backdrop-filter: blur(3px); /* Reduced blur for light theme */
+  border: 1px solid rgba(0, 0, 0, 0.05); 
+  backdrop-filter: blur(3px); 
 }
 
 .featureCard:hover {
-  transform: translateY(-8px); /* Reduced hover lift for light theme */
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12); /* Slightly enhanced hover shadow for light theme */
-  background-color: #f9f9f9; /* Slightly off-white hover background */
+  transform: translateY(-8px); 
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12); 
+  background-color: #f9f9f9; 
   border-color: rgba(
     0,
     0,
     0,
     0.08
-  ); /* Slightly more visible border on hover for light theme */
+  ); 
 }
 
 .featureIcon {
-  font-size: 2.5rem; /* Increased icon size */
-  color: #0ece00; /* Yellow-amber icon color - warm and bright */
-  margin-bottom: 2.5rem; /* Increased icon margin */
-  opacity: 0.9; /* Slightly reduced opacity for icon color in light theme */
+  font-size: 2.5rem; 
+  color: #0ece00;
+  margin-bottom: 2.5rem; 
+  opacity: 0.9; 
 }
 
 .featureCardTitle {
-  font-size: 1.4rem; /* Slightly increased card title size */
-  font-weight: 700; /* Bolder card title */
+  font-size: 1.4rem; 
+  font-weight: 700; 
   letter-spacing: 0.03rem;
   line-height: 1.5;
-  color: #0056b3; /* Blue card title - contrasting and colorful */
-  margin-bottom: 1.2rem; /* Increased title margin */
+  color: #0056b3; 
+  margin-bottom: 1.2rem; 
   font-family: "Inter", sans-serif;
   text-transform: uppercase;
 }
 
 .featureCardDescription {
-  font-size: 1.1rem; /* Slightly increased card description size */
+  font-size: 1.1rem; 
   line-height: 1.8;
-  color: #666; /* Medium gray card description text */
+  color: #666; 
   font-weight: 400;
-  opacity: 1; /* Reset opacity for description text in light theme */
+  opacity: 1; 
 }
 
-/* Responsive adjustments - minor tweaks for light theme */
 @media (max-width: 768px) {
   .featuresSection {
-    padding: 5rem 0; /* Adjusted section padding for mobile */
+    padding: 5rem 0; 
   }
   .container {
-    width: 98%; /* Even wider container on mobile */
+    width: 98%; 
     padding: 2.5rem;
     margin-bottom: 4rem;
   }
@@ -166,7 +165,7 @@
     margin-bottom: 3.5rem;
   }
   .sectionTitle {
-    font-size: 2.5rem; /* Adjusted title size on mobile */
+    font-size: 2.5rem; 
     margin-bottom: 1.2rem;
   }
   .introText {
@@ -180,8 +179,8 @@
   .topCarousel,
   .bottomCarousel {
     padding: 1rem 0;
-    border-top: none; /* Removed borders for cleaner look on mobile - light theme */
-    border-bottom: none; /* Removed borders for cleaner look on mobile - light theme */
+    border-top: none; 
+    border-bottom: none;
   }
   .carouselInnerLeftToRight,
   .carouselInnerRightToLeft {
@@ -189,15 +188,14 @@
     animation-duration: 22s;
   }
   .featureCard {
-    width: 320px; /* Adjusted card width on mobile */
+    width: 320px; 
     padding: 2.2rem;
     border-radius: 0.65rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adjusted card shadow for mobile light theme */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
   }
   .featureCard:hover {
     transform: translateY(-6px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Adjusted hover shadow for mobile light theme */
-  }
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   .featureIcon {
     font-size: 2rem;
     margin-bottom: 1.8rem;
@@ -212,7 +210,7 @@
 
 @media (max-width: 480px) {
   .sectionTitle {
-    font-size: 2.2rem; /* Further reduced section title size for very small screens */
+    font-size: 2.2rem; 
   }
   .introText {
     font-size: 1.15rem;

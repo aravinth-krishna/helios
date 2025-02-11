@@ -89,26 +89,14 @@
 }
 
 .secondary:hover {
-  background-color: rgba(
-    0,
-    123,
-    255,
-    0.1
-  ); /* Light blue background on hover - using rgba for subtle effect */
-  color: #0056b3; /* Darker blue text on hover */
-  transform: translateY(
-    -3px
-  ); /* Slight lift on hover - consistent with primary button */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover for secondary */
+  background-color: rgba(0, 123, 255, 0.1);
+  color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .secondary:active {
-  background-color: rgba(
-    0,
-    123,
-    255,
-    0.2
-  ); /* Slightly darker blue background on active */
-  transform: translateY(0); /* No lift on click */
-  box-shadow: none; /* No shadow on click for secondary button */
+  background-color: rgba(0, 123, 255, 0.2);
+  transform: translateY(0);
+  box-shadow: none;
 }

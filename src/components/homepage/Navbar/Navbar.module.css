@@ -1,9 +1,9 @@
 .header {
-  width: 100%; /* Full width navbar */
-  background-color: #0d1a26; /* Dark blue background - solar night sky */
-  padding: 1rem 2rem; /* Increased vertical padding slightly */
+  width: 100%; 
+  background-color: #0d1a26; 
+    padding: 1rem 2rem; 
   z-index: 1000;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtler shadow */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); 
 }
 
 .navbar {
@@ -12,7 +12,7 @@
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  font-size: 1.1rem; /* Slightly reduced font size for cleaner look */
+  font-size: 1.1rem;
 }
 
 .left,
@@ -34,46 +34,44 @@
 .right {
   flex: 1;
   justify-content: flex-end;
-  gap: 1.25rem; /* Adjusted gap */
+  gap: 1.25rem; 
 }
 
 .logo {
-  font-size: 1.5rem; /* Slightly larger logo */
-  font-weight: 600; /* Slightly bolder logo */
-  color: #f0f8ff; /* Light sky blue - solar energy feel */
+  font-size: 1.5rem; 
+  font-weight: 600; 
+  color: #f0f8ff; 
   text-decoration: none;
 }
 
 .navLinks {
   display: flex;
-  gap: 2.5rem; /* Adjusted gap */
+  gap: 2.5rem; 
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .navLinks li a {
-  color: #f0f8ff; /* Light text */
+  color: #f0f8ff; 
   text-decoration: none;
   font-weight: 500;
   position: relative;
-  transition: color 0.3s ease; /* Removed transform from hover */
-}
+  transition: color 0.3s ease; 
 
 .navLinks li a::after {
   content: "";
   position: absolute;
-  bottom: -6px; /* Adjusted underline position */
+  bottom: -6px; 
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #ffc400; /* Yellow underline - sun color */
+  background-color: #ffc400; 
   transition: width 0.3s ease;
 }
 
 .navLinks li a:hover {
-  color: #ffc400; /* Yellow hover - sun color */
-  /* Removed transform on hover */
+  color: #ffc400; 
 }
 
 .navLinks li a:hover::after {
@@ -81,18 +79,18 @@
 }
 
 .authLink {
-  color: #f0f8ff; /* Light text */
+  color: #f0f8ff; 
   text-decoration: none;
-  font-weight: 600; /* Bolder sign in button */
-  border: 2px solid #ffc400; /* Yellow border - sun color */
-  padding: 0.5rem 1rem; /* Adjusted padding */
+  font-weight: 600; 
+  border: 2px solid #ffc400; 
+  padding: 0.5rem 1rem; 
   border-radius: 0.5rem;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Changed property name */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .authLink:hover {
-  background-color: #ffc400; /* Yellow background on hover - sun color */
-  color: #0d1a26; /* Dark text on hover - contrast */
+  background-color: #ffc400; 
+  color: #0d1a26; 
 }
 
 .hamburger {
@@ -103,8 +101,8 @@
 }
 
 .icon {
-  font-size: 1.5rem; /* Slightly larger icon */
-  color: #f0f8ff; /* Light icon color */
+  font-size: 1.5rem; 
+  color: #f0f8ff;
 }
 
 .mobileMenu {
@@ -120,34 +118,33 @@
   }
   .mobileMenu {
     display: block;
-    background-color: #0d1a26; /* Dark mobile menu background */
-    position: relative; /* Changed from absolute to relative */
-    top: 0; /* Reset top and left for normal flow */
+    background-color: #0d1a26;
+    position: relative; 
+    top: 0; 
     left: 0;
     width: 100%;
-    animation: none; /* Removed slideDown animation for normal flow */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Added subtle shadow to mobile menu */
+    animation: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   }
   .mobileMenu ul {
     list-style: none;
-    padding: 1.5rem 2rem; /* Adjusted padding for mobile menu */
+    padding: 1.5rem 2rem; 
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* Adjusted gap for mobile menu */
-    text-align: center; /* Center text in mobile menu */
+    gap: 1.5rem; 
+    text-align: center; 
   }
   .mobileMenu ul li a {
     color: #f0f8ff;
     text-decoration: none;
     font-size: 1.2rem;
-    display: block; /* Make links full width in mobile menu */
-    padding: 0.75rem 0; /* Add padding to mobile menu links for better touch area */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator for mobile links */
+    display: block; 
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   .mobileMenu ul li a:last-child {
-    border-bottom: none; /* Remove bottom border from last mobile link */
+    border-bottom: none; 
   }
 }
 
-/* Removed slideDown keyframes as mobile menu is no longer sliding down */

@@ -68,21 +68,18 @@
   letter-spacing: 0.02rem;
 }
 
-/* Ensure button container is above overlay and spaced */
 .hero > div:last-child {
-  position: relative; /* Ensure button div is above overlay */
-  margin-top: 2.5rem; /* Spacing between text and button */
-  /* You will style GetStartedButton component separately */
+  position: relative;
+  margin-top: 2.5rem;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .hero {
     min-height: 90vh;
     height: auto;
     padding-top: 50px;
     padding-bottom: 4rem;
-    justify-content: flex-start; /* Align from top on mobile */
+    justify-content: flex-start;
     padding-top: 100px;
   }
   .content {
@@ -100,7 +97,7 @@
     line-height: 1.5;
   }
   .hero > div:last-child {
-    margin-top: 2rem; /* Adjust button spacing on mobile */
+    margin-top: 2rem;
   }
 }
 

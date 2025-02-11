@@ -7,7 +7,7 @@ import EfficiencyCalculator from "@/components/dashboard/EfficiencyCalculator/Ef
 import MapLocationPicker from "@/components/dashboard/MapLocationPicker/MapLocationPicker";
 import SolarSubsidyCalculator from "@/components/dashboard/SolarSubsidyCalculator/SolarSubsidyCalculator";
 import Chat from "@/components/dashboard/Chat/Chat";
-import styles from "./page.module.css"; // Import CSS Modules
+import styles from "./page.module.css";
 import { DiVim } from "react-icons/di";
 
 const DashboardPage = () => {

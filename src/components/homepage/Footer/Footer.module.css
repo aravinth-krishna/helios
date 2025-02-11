@@ -1,19 +1,18 @@
-/* Footer.module.css */
 .footer {
-  background-color: #0d1a26; /* Dark blue background - consistent theme */
-  padding: 3rem 0; /* Increased vertical padding for better visual balance */
+  background-color: #0d1a26;
+  padding: 3rem 0;
   text-align: center;
   width: 100%;
-  color: #d0e8ff; /* Lighter text color - consistent with other sections */
-  font-size: 1rem; /* Slightly increased font size for better readability */
-  font-weight: 400; /* Regular font weight for better readability */
-  border-top: 1px solid rgba(255, 255, 255, 0.08); /* Subtle top border for separation */
+  color: #d0e8ff;
+  font-size: 1rem;
+  font-weight: 400;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 100;
   font-family: "Inter", sans-serif;
-  letter-spacing: 0.03rem; /* Slightly adjusted letter spacing */
-  box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.2); /* Slightly enhanced shadow for depth */
-  position: relative; /* For potential overlay or pseudo-elements */
-  overflow: hidden; /* To contain any potential overflow */
+  letter-spacing: 0.03rem;
+  box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
 }
 
 .footer::before {
@@ -24,20 +23,20 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.1);
-  pointer-events: none; /* Make overlay non-interactive */
+  pointer-events: none;
 }
 
 .footer p {
-  position: relative; /* To keep text above any overlay */
-  padding: 0 2rem; /* Add horizontal padding for text within footer */
+  position: relative;
+  padding: 0 2rem;
 }
 
 @media (max-width: 768px) {
   .footer {
-    padding: 2.5rem 0; /* Adjusted padding for smaller screens */
-    font-size: 0.9rem; /* Adjusted font size for smaller screens */
+    padding: 2.5rem 0;
+    font-size: 0.9rem;
   }
   .footer p {
-    padding: 0 1rem; /* Adjusted horizontal padding for text on smaller screens */
+    padding: 0 1rem;
   }
 }
