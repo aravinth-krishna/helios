@@ -5,7 +5,7 @@ import DashboardNavbar from "@/components/dashboard/DashboardNavbar/DashboardNav
 import DashboardSidebar from "@/components/dashboard/DashboardSidebar/DashboardSidebar";
 import EfficiencyCalculator from "@/components/dashboard/EfficiencyCalculator/EfficiencyCalculator";
 import MapLocationPicker from "@/components/dashboard/MapLocationPicker/MapLocationPicker";
-import SolarIncentives from "@/components/dashboard/SolarIncentives/SolarIncentives";
+import SolarSubsidyCalculator from "@/components/dashboard/SolarSubsidyCalculator/SolarSubsidyCalculator";
 import Chat from "@/components/dashboard/Chat/Chat";
 import styles from "./page.module.css"; // Import CSS Modules
 import { DiVim } from "react-icons/di";
@@ -73,7 +73,7 @@ const DashboardPage = () => {
           {currentView === "incentive" && (
             <div>
               <div className={styles.placeholderText}>
-                <SolarIncentives />
+                <SolarSubsidyCalculator />
               </div>
             </div>
           )}

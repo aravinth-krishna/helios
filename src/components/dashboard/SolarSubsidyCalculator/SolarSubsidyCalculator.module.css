@@ -1,0 +1,255 @@
+:root {
+  /* Theme Colors - Consistent with NewsFetcher example, adjust if needed */
+  --primary-color: #2563eb;
+  --primary-color-light: #60a5fa;
+  --secondary-color: #374151;
+  --background-color: #f9fafb;
+  --card-background: #ffffff;
+  --text-color-primary: #1f2937;
+  --text-color-secondary: #6b7280;
+  --border-color: #e5e7eb;
+  --accent-color: #4ade80;
+
+  /* Typography */
+  --font-family: "Inter", sans-serif;
+  --font-size-base: 1rem;
+  --font-size-h2: 1.75rem;
+  --font-size-h3: 1.25rem;
+  --font-weight-bold: 600;
+  --font-weight-normal: 400;
+
+  /* Spacing */
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+  /* Shadows */
+  --box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.05);
+  --box-shadow-hover: 0 4px 6px rgba(0, 0, 0, 0.1),
+    0 6px 15px rgba(0, 0, 0, 0.1);
+
+  --transition-speed: 0.2s ease-in-out;
+}
+
+.container {
+  margin: 0 auto;
+  padding: var(--space-xl);
+  max-width: 900px; /* Wider container for better layout */
+  font-family: var(--font-family);
+  color: var(--text-color-primary);
+  background-color: var(--background-color);
+  border-radius: 0.5rem; /* Rounded container */
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--border-color);
+}
+
+.title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-lg);
+  text-align: center;
+  color: var(--primary-color); /* Primary color for title */
+}
+
+.inputGroup {
+  margin-bottom: var(--space-xl);
+}
+
+.label {
+  display: block;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-sm);
+  color: var(--text-color-primary);
+}
+
+.select,
+.slider {
+  width: 100%;
+  padding: var(--space-md);
+  font-size: var(--font-size-base);
+  border-radius: 0.375rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  transition: border-color var(--transition-speed),
+    box-shadow var(--transition-speed);
+  background-color: var(--card-background);
+  color: var(--text-color-primary);
+}
+
+.select:focus,
+.slider:focus {
+  outline: none;
+  border-color: var(--primary-color-light);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='currentColor' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 0.75rem);
+  background-position-y: center;
+  padding-right: 2.5rem;
+}
+
+.slider {
+  -webkit-appearance: none;
+  height: 0.5rem; /* Thinner slider track */
+  background: var(--border-color); /* Light gray slider track */
+  outline: none;
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  margin-top: var(--space-sm); /* Add a little space above the slider */
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: var(--space-md); /* Larger thumb */
+  height: var(--space-md);
+  border-radius: 50%;
+  background: var(--primary-color); /* Primary color thumb */
+  cursor: pointer;
+  border: none;
+  box-shadow: var(--box-shadow);
+  transition: transform var(--transition-speed);
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.slider::-moz-range-thumb {
+  width: var(--space-md);
+  height: var(--space-md);
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  border: none;
+  box-shadow: var(--box-shadow);
+  transition: transform var(--transition-speed);
+}
+
+.slider::-moz-range-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.capacityDisplay {
+  margin-top: var(--space-sm);
+  font-size: var(--font-size-base);
+  color: var(--text-color-secondary); /* Secondary color for capacity display */
+}
+
+.inputDescription {
+  font-size: 0.875rem;
+  color: var(--text-color-secondary);
+  margin-top: var(--space-sm);
+  font-style: italic;
+}
+
+.resultGroup {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  padding: var(--space-lg);
+  background-color: var(--card-background);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--border-color);
+}
+
+.result {
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px dashed var(--border-color); /* Dashed line separator */
+}
+
+.result:last-child {
+  margin-bottom: 0; /* No margin for last result */
+  padding-bottom: 0;
+  border-bottom: none; /* No border for last result */
+}
+
+.resultText {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-color-primary);
+  display: flex;
+  justify-content: space-between; /* Align value to the right */
+  align-items: baseline; /* Align text baselines */
+}
+
+.resultValue {
+  font-weight: var(--font-weight-normal); /* Regular weight for value */
+  color: var(--primary-color); /* Primary color for result values */
+  margin-left: var(--space-md); /* Space between text and value */
+  /* Add a visual cue, e.g., a subtle background or border, if desired */
+}
+
+.disclaimer {
+  padding: var(--space-md);
+  background-color: var(--background-color); /* Slightly different background */
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  color: var(--text-color-secondary);
+  margin-top: var(--space-xl);
+}
+
+.disclaimerTitle {
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.disclaimerList {
+  padding-left: var(--space-md);
+  list-style-type: disc; /* Use disc bullets */
+}
+
+/* Responsive adjustments (similar to NewsFetcher) */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--space-lg);
+  }
+  .title {
+    font-size: 1.5rem; /* Adjust title size on smaller screens */
+  }
+  .inputGroup {
+    margin-bottom: var(--space-lg);
+  }
+  .resultGroup {
+    padding: var(--space-md); /* Reduce padding on result group */
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: var(--space-md); /* Even less padding on very small screens */
+  }
+  .inputGroup {
+    margin-bottom: var(--space-md);
+  }
+  .resultGroup {
+    padding: var(
+      --space-sm
+    ); /* Even less padding on result group for tiny screens */
+  }
+  .resultText {
+    font-size: var(--font-size-base); /* Base font-size on very small screens */
+    flex-direction: column; /* Stack text and value */
+    align-items: flex-start; /* Align left on stack */
+  }
+  .resultValue {
+    margin-left: 0; /* No left margin when stacked */
+    margin-top: var(--space-sm); /* Add top margin to value when stacked */
+    display: block; /* Ensure value is on a new line */
+  }
+}
