@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { MdOutlineArrowBack } from "react-icons/md";
 import styles from "./NewsFetcher.module.css";
 
 interface Article {
@@ -128,7 +130,15 @@ const NewsFetcher: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <h2>Latest Solar News</h2>
+      <div className={styles.header}>
+        <h2>Latest Solar News. Easily Curatable.</h2>
+        <Link href={"/"}>
+          <button>
+            <MdOutlineArrowBack /> Home
+          </button>
+        </Link>
+      </div>
+
       <form onSubmit={handleSearch} className={styles.searchForm}>
         <input
           type="text"
@@ -161,13 +171,6 @@ const NewsFetcher: React.FC = () => {
           <option value="popularity">Popularity</option>
           <option value="publishedAt">Newest</option>
         </select>
-        <input
-          type="text"
-          value={sources}
-          onChange={(e) => setSources(e.target.value)}
-          placeholder="Filter by sources (comma separated)"
-          className={styles.sourceInput}
-        />
       </div>
       {error && <div className={styles.error}>Error: {error}</div>}
       {news.length > 0 ? (

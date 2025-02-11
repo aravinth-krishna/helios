@@ -30,7 +30,6 @@
 .content {
   position: relative;
   width: 90%;
-  max-width: 900px;
   color: #f0f8ff;
   text-align: center;
   padding: 2.5rem;
@@ -38,13 +37,25 @@
 
 .content h1 {
   margin-bottom: 1.5rem;
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 800;
+  line-height: 1.3;
+  color: #d0e8ff;
+  text-shadow: 0 3px 8px rgba(229, 255, 0, 0.774);
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.content h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
   line-height: 1.3;
   text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
   font-family: "Inter", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
 }
 
 .content p {
