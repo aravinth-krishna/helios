@@ -3,74 +3,53 @@ import React, { useState, useEffect } from "react";
 import styles from "./SolarSubsidyCalculator.module.css";
 
 const SolarSubsidyCalculator: React.FC = () => {
-  const [capacity, setCapacity] = useState(1); // System capacity in kW
-  const [subsidy, setSubsidy] = useState(0); // Estimated subsidy amount
-  const [installationCost, setInstallationCost] = useState(0); // Total installation cost
-  const [sector, setSector] = useState("residential"); // User selected sector (Residential/Commercial/etc.) - conceptually included for future expansion
-  const [state, setState] = useState("default"); // User selected state - conceptually included for future expansion
-  const installationCostPerKW = 50000; // Average installation cost per kW in ₹ (Indian Rupees)
+  const [capacity, setCapacity] = useState(1);
+  const [subsidy, setSubsidy] = useState(0);
+  const [installationCost, setInstallationCost] = useState(0);
+  const [sector, setSector] = useState("residential");
+  const [state, setState] = useState("default");
+  const installationCostPerKW = 50000;
 
-  /**
-   * Calculates the estimated subsidy and total installation cost based on system capacity.
-   *
-   * This calculation is based on a simplified, tiered subsidy model that was common in India.
-   * Actual subsidy amounts can vary significantly based on current government policies,
-   * state-specific incentives, scheme rules, and the type of consumer (residential, commercial, etc.).
-   *
-   * Currently, this calculator uses a capacity-based subsidy logic:
-   * - For capacity up to 2kW: 60% subsidy on the installation cost.
-   * - For capacity between 2kW and 3kW: 60% on the first 2kW and 40% on the capacity above 2kW.
-   * - For capacity above 3kW: Subsidy is capped at the amount calculated for a 3kW system (₹78,000 in this example's logic).
-   *
-   * @param capacity System capacity in kW.
-   * @returns An object containing the calculated subsidy and installation cost.
-   */
   const calculateSubsidy = (capacity: number) => {
     let subsidyAmount = 0;
     const cost = capacity * installationCostPerKW;
 
     if (capacity <= 2) {
-      subsidyAmount = cost * 0.6; // 60% subsidy for up to 2kW
+      subsidyAmount = cost * 0.6;
     } else if (capacity > 2 && capacity <= 3) {
       subsidyAmount =
         2 * installationCostPerKW * 0.6 +
-        (capacity - 2) * installationCostPerKW * 0.4; // Tiered subsidy for 2-3kW
+        (capacity - 2) * installationCostPerKW * 0.4;
     } else if (capacity > 3) {
-      subsidyAmount = 78000; // Subsidy capped at 3kW calculation (₹78,000 as per logic)
+      subsidyAmount = 78000;
     }
 
-    return { subsidy: Math.min(subsidyAmount, 78000), installationCost: cost }; // Cap subsidy to ₹78,000 and return both values
+    return { subsidy: Math.min(subsidyAmount, 78000), installationCost: cost };
   };
 
   useEffect(() => {
-    // Recalculate subsidy whenever capacity changes
     const calculation = calculateSubsidy(capacity);
     setSubsidy(calculation.subsidy);
     setInstallationCost(calculation.installationCost);
   }, [capacity]);
 
   const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setCapacity(parseFloat(event.target.value)); // Update capacity state on slider change
+    setCapacity(parseFloat(event.target.value));
   };
 
   const handleSectorChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSector(event.target.value); // Update sector state on dropdown change
-    // In a real-world scenario, sector could influence subsidy calculation.
-    // Here, it's included for UI and potential future logic expansion.
+    setSector(event.target.value);
     console.log("Selected Sector:", event.target.value);
   };
 
   const handleStateChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setState(event.target.value); // Update state state on dropdown change
-    // In a real-world scenario, state could significantly impact subsidy schemes.
-    // Here, it's included for UI and potential future logic expansion.
+    setState(event.target.value);
     console.log("Selected State:", event.target.value);
   };
 
-  const netInstallationCost = installationCost - subsidy; // Calculate net cost after subsidy
+  const netInstallationCost = installationCost - subsidy;
   const subsidyPercentage =
-    installationCost > 0 ? (subsidy / installationCost) * 100 : 0; // Calculate subsidy as percentage of cost
-
+    installationCost > 0 ? (subsidy / installationCost) * 100 : 0;
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Indian Solar Rooftop Subsidy Calculator</h2>
@@ -110,8 +89,6 @@ const SolarSubsidyCalculator: React.FC = () => {
           <option value="default">All India (General)</option>
           <option value="state1">State 1 (Example)</option>
           <option value="state2">State 2 (Example)</option>
-          {/* Add a comprehensive list of Indian States here for a real application */}
-          {/* You could fetch state names from an API or static data for a dropdown list */}
         </select>
         <p className={styles.inputDescription}>
           Select your state to see if state-specific subsidies apply (currently
@@ -200,8 +177,8 @@ const SolarSubsidyCalculator: React.FC = () => {
             <li>
               <strong>
                 Check for state-specific solar incentive programs and policies
-                offered by your state's renewable energy development agency or
-                electricity distribution companies.
+                offered by your state&apos;s renewable energy development agency
+                or electricity distribution companies.
               </strong>
             </li>
             <li>

@@ -8,7 +8,6 @@ import MapLocationPicker from "@/components/dashboard/MapLocationPicker/MapLocat
 import SolarSubsidyCalculator from "@/components/dashboard/SolarSubsidyCalculator/SolarSubsidyCalculator";
 import Chat from "@/components/dashboard/Chat/Chat";
 import styles from "./page.module.css";
-import { DiVim } from "react-icons/di";
 
 const DashboardPage = () => {
   const [latitude, setLatitude] = useState<number | null>(null);
@@ -48,7 +47,6 @@ const DashboardPage = () => {
         <div className={styles.contentArea}>
           {currentView === "roi" && (
             <>
-              {/* Conditionally render EfficiencyCalculator */}
               {typeof latitude === "number" && typeof longitude === "number" ? (
                 <div className={styles.componentWrapper}>
                   <EfficiencyCalculator
