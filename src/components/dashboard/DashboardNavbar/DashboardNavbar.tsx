@@ -3,10 +3,12 @@ import styles from "./DashboardNavbar.module.css";
 
 const DashboardNavbar = () => {
   return (
-    <nav className={styles.navbar}>
-      <h1>Dashboard</h1>
-      <SignOutButton />
-    </nav>
+    <header className={styles.header}>
+      <nav className={styles.navbar}>
+        <h1>Dashboard</h1>
+        <SignOutButton />
+      </nav>
+    </header>
   );
 };
 

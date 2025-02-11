@@ -19,6 +19,14 @@ const DashboardSidebar: React.FC<DashboardSidebarProps> = ({ onNavClick }) => {
         </li>
         <li className={styles.navItem}>
           <button
+            onClick={() => onNavClick("incentive")}
+            className={styles.navButton}
+          >
+            Incentive details
+          </button>
+        </li>
+        <li className={styles.navItem}>
+          <button
             onClick={() => onNavClick("chat")}
             className={styles.navButton}
           >

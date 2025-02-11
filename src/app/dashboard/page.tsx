@@ -5,8 +5,10 @@ import DashboardNavbar from "@/components/dashboard/DashboardNavbar/DashboardNav
 import DashboardSidebar from "@/components/dashboard/DashboardSidebar/DashboardSidebar";
 import EfficiencyCalculator from "@/components/dashboard/EfficiencyCalculator/EfficiencyCalculator";
 import MapLocationPicker from "@/components/dashboard/MapLocationPicker/MapLocationPicker";
+import SolarIncentives from "@/components/dashboard/SolarIncentives/SolarIncentives";
 import Chat from "@/components/dashboard/Chat/Chat";
 import styles from "./page.module.css"; // Import CSS Modules
+import { DiVim } from "react-icons/di";
 
 const DashboardPage = () => {
   const [latitude, setLatitude] = useState<number | null>(null);
@@ -44,9 +46,36 @@ const DashboardPage = () => {
       <div className={styles.mainContent}>
         <DashboardSidebar onNavClick={setCurrentView} />
         <div className={styles.contentArea}>
-          {renderContent()}
           {currentView === "roi" && (
-            <MapLocationPicker onLocationChange={handleLocationChange} />
+            <>
+              {/* Conditionally render EfficiencyCalculator */}
+              {typeof latitude === "number" && typeof longitude === "number" ? (
+                <div className={styles.componentWrapper}>
+                  <EfficiencyCalculator
+                    latitude={latitude}
+                    longitude={longitude}
+                  />
+                </div>
+              ) : (
+                <p className={styles.placeholderText}>
+                  Please select a location on the map to calculate solar
+                  efficiency.
+                </p>
+              )}
+              <MapLocationPicker onLocationChange={handleLocationChange} />
+            </>
+          )}
+          {currentView === "chat" && (
+            <div className={styles.componentWrapper}>
+              <Chat />
+            </div>
+          )}
+          {currentView === "incentive" && (
+            <div>
+              <div className={styles.placeholderText}>
+                <SolarIncentives />
+              </div>
+            </div>
           )}
         </div>
       </div>

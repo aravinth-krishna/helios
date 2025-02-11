@@ -1,0 +1,63 @@
+/* Premium Styles */
+
+.container {
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    color: #0d47a1;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  
+  .error {
+    color: #d32f2f;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .incentiveList {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0;
+  }
+  
+  .incentiveItem {
+    background: #f9f9f9;
+    margin: 20px 0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .incentiveItem:hover {
+    background: #e3f2fd;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .incentiveItem h3 {
+    font-size: 1.8rem;
+    color: #212121;
+    margin: 0 0 10px 0;
+  }
+  
+  .incentiveItem p {
+    color: #616161;
+    margin: 0;
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
+  

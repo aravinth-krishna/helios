@@ -108,7 +108,6 @@ const EfficiencyCalculator: React.FC<EfficiencyCalculatorProps> = ({
           setEstimatedACEnergy(calculatedACEnergy);
           setSystemEfficiency(calculatedSystemEfficiency);
 
-          // ROI Calculation (Simplified)
           const annualEnergyProduction = calculatedACEnergy * 365;
           const annualSavings = annualEnergyProduction * electricityCost;
           const calculatedPaybackPeriod = estimatedSystemCost / annualSavings;

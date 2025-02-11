@@ -1,8 +1,22 @@
+.header {
+  width: 100%; /* Full width navbar */
+  background-color: #0d1a26; /* Dark blue background - solar night sky */
+  padding: 1rem 2rem; /* Increased vertical padding slightly */
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtler shadow */
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #fff;
+  padding: 0.5rem 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f0f8ff;
+  text-decoration: none;
 }
